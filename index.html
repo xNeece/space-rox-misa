@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roxy — Xatspace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       PANTALLA DE INICIO
+       ========================================================= -->
+  <section id="startScreen" class="screen start-screen">
+    <canvas id="startFx" class="fx-canvas" aria-hidden="true"></canvas>
+    <div class="start-shell">
+      <div class="jp-bg" aria-hidden="true">
+        <span class="jp1">死神 ☠</span><span class="jp2">ノート ⛧</span><span class="jp3">名前を書け</span>
+        <span class="jp4">黒い羽 ♱</span><span class="jp5">魂 ♰</span><span class="jp6">運命 𓄧</span>
+      </div>
+      <div class="start-portrait">
+        <div class="portrait-image"></div>
+        <div class="smoke smoke-one"></div>
+        <div class="smoke smoke-two"></div>
+        <div class="portrait-vignette"></div>
+      </div>
+
+      <div class="start-profile">
+        <div class="mini-symbol">✢</div>
+        <h1>Roxy</h1>
+        <div class="start-meta">
+          <span>♍ &nbsp; Virgo</span>
+          <span>● &nbsp; México</span>
+        </div>
+      </div>
+
+      <div class="start-divider"><span>✢</span></div>
+
+      <p class="start-phrase">Be careful what you awaken.</p>
+
+      <!-- Cuadro real de aceptación/denegación -->
+      <div class="permission-window">
+        <div class="window-title">
+          <span>Acceder a la galería</span>
+          <button class="window-x" aria-label="Cerrar">×</button>
+        </div>
+        <div class="window-body">
+          <div class="folder-icon">▰</div>
+          <div class="window-message">¿Deseas acceder a la galería?</div>
+        </div>
+        <div class="window-actions">
+          <button id="acceptBtn" class="dialog-btn">Aceptar</button>
+          <button id="denyBtn" class="dialog-btn">Denegar</button>
+        </div>
+      </div>
+
+      <div class="start-bottom-symbols">
+        <span>▱</span><span>♡</span><span>♙</span>
+      </div>
+
+      <div class="start-bottom-line"></div>
+      <div class="by-nece start-by-nece">By Nece</div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       XATSPACE PRINCIPAL
+       ========================================================= -->
+  <section id="mainScreen" class="screen main-screen hidden">
+    <canvas id="mainFx" class="fx-canvas" aria-hidden="true"></canvas>
+    <div class="space-shell">
+      <div class="jp-bg" aria-hidden="true">
+        <span class="jp1">死神 ☠</span><span class="jp2">ノート ⛧</span><span class="jp3">名前を書け</span>
+        <span class="jp4">黒い羽 ♱</span><span class="jp5">魂 ♰</span><span class="jp6">運命 𓄧</span>
+        <span class="jp7">DEATH NOTE</span><span class="jp8">死</span><span class="jp9">☠ ♰ ⛧</span>
+      </div>
+
+      <aside class="sidebar">
+        <div class="sidebar-symbol">✢</div>
+
+        <div class="avatar-wrap">
+          <div class="avatar-ring"></div>
+          <img src="assets/images/avatar.jpg" alt="Avatar" class="avatar" id="sidebarAvatar"
+               onerror="this.style.opacity='.12'">
+          <span class="avatar-cross">＋</span>
+        </div>
+
+        <h1 class="profile-name">Roxy</h1>
+        <div class="profile-record">REG: Sardothein</div>
+        <div class="profile-id">ID: 292726180</div>
+
+        <div class="profile-info">
+          <div><span class="info-symbol">♍</span><span>Virgo</span></div>
+          <div><span class="info-symbol">●</span><span>México</span></div>
+        </div>
+
+        <div class="divider-cross"><span>✢</span></div>
+
+        <div class="socials" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">◎</a>
+          <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" title="TikTok">♪</a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">f</a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" title="YouTube">▶</a>
+          <a href="https://x.com/" target="_blank" rel="noopener noreferrer" title="X">𝕏</a>
+        </div>
+
+        <div class="date-clock" aria-label="Fecha y hora">
+          <div class="day-line"><span id="dayName">MON</span> <span id="dayNumber">28</span></div>
+          <div id="monthLine" class="month-line">SEPTIEMBRE</div>
+          <div id="clockLine" class="clock-line">00:00:00</div>
+        </div>
+
+ <div class="sidebar-media" id="sidebarMedia">
+  <video
+    src="assets/sidebar/video.mp4"
+    autoplay
+    muted
+    loop
+    playsinline>
+  </video>
+</div>
+</aside>
+
+      <main class="content">
+        <!-- Siempre estático -->
+        <header class="topbar">
+          <nav class="tabs" aria-label="Navegación principal">
+            <button class="tab active" data-tab="photos">
+              <span>▧</span><b>Fotos</b><small id="photoCount">33</small>
+            </button>
+            <button class="tab" data-tab="videos">
+              <span>▷</span><b>Videos</b><small id="videoCount">15</small>
+            </button>
+            <button class="tab" data-tab="friends">
+              <span>♙</span><b>Amigos</b><small>6</small>
+            </button>
+            <button class="tab" data-tab="music">
+              <span>♫</span><b>Música</b><small id="musicCount">10</small>
+            </button>
+            <button class="tab" data-tab="hobbies">
+              <span>☆</span><b>Hobbies</b><small>8</small>
+            </button>
+            <button class="tab" data-tab="gift">
+              <span>♔</span><b>Regalos</b><small>6</small>
+            </button>
+          </nav>
+
+          <div class="player">
+            <div class="player-cover">♫</div>
+            <div class="player-meta">
+              <strong id="nowTitle">Sin música</strong>
+              <span id="nowArtist">Agregá tus MP3</span>
+              <div class="mini-wave" id="miniWave" aria-hidden="true"></div>
+              <div class="progress"><i id="progressBar"></i></div>
+            </div>
+            <button id="prevBtn" title="Anterior">|◀</button>
+            <button id="playBtn" title="Reproducir">▶</button>
+            <button id="nextBtn" title="Siguiente">▶|</button>
+          </div>
+          <div class="chain">♱<br>†</div>
+        </header>
+
+        <!-- Solo el contenido cambia y tiene su propio scroll -->
+        <section id="tabContent" class="tab-content"></section>
+      </main>
+    </div>
+    <div class="by-nece main-by-nece">By Nece</div>
+  </section>
+
+  <div id="lightbox" class="lightbox hidden">
+    <button id="lightboxClose" aria-label="Cerrar">×</button>
+    <button id="lightboxPrev" class="lightbox-nav lightbox-prev" aria-label="Foto anterior">‹</button>
+    <img id="lightboxImage" src="" alt="">
+    <button id="lightboxNext" class="lightbox-nav lightbox-next" aria-label="Foto siguiente">›</button>
+  </div>
+
+  <div id="videoLightbox" class="video-lightbox hidden" role="dialog" aria-modal="true">
+    <button id="videoLightboxClose" class="video-lightbox-close" aria-label="Cerrar">×</button>
+    <button id="videoLightboxPrev" class="lightbox-nav lightbox-prev" aria-label="Video anterior">‹</button>
+    <video id="videoLightboxPlayer" class="video-lightbox-player" controls playsinline muted></video>
+    <button id="videoLightboxNext" class="lightbox-nav lightbox-next" aria-label="Video siguiente">›</button>
+  </div>
+
+  <div id="unlockModal" class="unlock-modal hidden" role="dialog" aria-modal="true" aria-labelledby="unlockTitle">
+    <div class="unlock-dialog">
+      <button id="unlockModalClose" class="unlock-modal-close" aria-label="Cerrar">×</button>
+      <div class="unlock-dialog-symbol">☠</div>
+      <h2 id="unlockTitle">Desbloquear contenido</h2>
+      <p id="unlockMessage">¿Estás seguro de gastar <strong>1500 xats</strong> para ver este contenido?</p>
+      <div class="unlock-dialog-actions">
+        <button id="unlockCancel" class="unlock-dialog-btn cancel" type="button">Cancelar</button>
+        <button id="unlockAccept" class="unlock-dialog-btn accept" type="button">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="giftLightbox" class="gift-lightbox hidden" role="dialog" aria-modal="true" aria-label="Regalo ampliado">
+    <button id="giftLightboxClose" class="gift-lightbox-close" aria-label="Cerrar">×</button>
+    <button id="giftLightboxPrev" class="lightbox-nav gift-lightbox-prev" aria-label="Regalo anterior">‹</button>
+    <div class="gift-lightbox-stage">
+      <img id="giftLightboxImage" src="" alt="Regalo ampliado">
+    </div>
+    <button id="giftLightboxNext" class="lightbox-nav gift-lightbox-next" aria-label="Regalo siguiente">›</button>
+  </div>
+
+  <div id="transitionOverlay" class="transition-overlay hidden" aria-hidden="true">
+    <div class="transition-gallery" aria-hidden="true">
+      <img src="assets/transition/transition01.jpg" alt="">
+      <img src="assets/transition/transition02.jpg" alt="">
+      <img src="assets/transition/transition03.jpg" alt="">
+      <img src="assets/transition/transition04.jpg" alt="">
+      <img src="assets/transition/transition05.jpg" alt="">
+    </div>
+    <div class="transition-lines"></div>
+    <div class="transition-shade"></div>
+    <div class="transition-loading">Cargando Xatspace...<span>⛧ &nbsp; ☠ &nbsp; ♰</span></div>
+  </div>
+
+  <audio id="audioPlayer" preload="metadata"></audio>
+  <script src="js/script.js"></script>
+</body>
+</html>
