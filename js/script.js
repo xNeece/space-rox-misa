@@ -1132,7 +1132,7 @@ const friendsData = [
     avatar: "assets/friends/avatar02.png",
     video: "assets/friends/video02.mp4",
     link: "https://xat.me/1555016996",
-    quote: "「 Te adoro amiga de mi corazón, cuenta conmigo para las que salgan. 15 años de amistad y contando. Reales hasta la muerte oiste bb。 」"
+    quote: "「 PARA THEIN SARDO MIKEY. A veces las palabras no son lo mío pero, a una de las leyendas más longevas del sat puntocon (?, y una de las personas más agradables de tratar por aquí. Apareciendo aquí aprovecho para agradecer y destacarte por el buen trato, las risas, el estar pendiente de una forma u otra así no tengamos tanto tiempo y hasta por ser buena amiga de mis amigos. Por ello y más cosas, me alegra decirte que cuentas con un humilde servidor para tonterías o para cuando quieras hablar con alguien. Y recuerda, los haters solo se tragan como al alcohol (?. Grande Thein。 」"
   },
   {
     number: 3,
