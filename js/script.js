@@ -1174,12 +1174,12 @@ const friendsData = [
     number: 6,
     name: "Nai",
     register: "REG: YUFFIE",
-    uid: "UID: 292726185",
+    uid: "UID: 1542991141",
     file: "assets/friends/friend06.jpg",
     render: "assets/friends/render06.png",
     avatar: "assets/friends/avatar06.png",
     video: "assets/friends/video06.mp4",
-    link: "https://xat.me/292726185",
+    link: "https://xat.me/1542991141",
     quote: "「 ここに好きな言葉を入れてください。 」"
   },
   {
