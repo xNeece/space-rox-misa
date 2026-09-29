@@ -7,4 +7,4 @@ transition03.jpg
 transition04.jpg
 transition05.jpg
 
-Cada imagen aparece durante 1,2 segundos.
+Dura en total es de 4 segundos.

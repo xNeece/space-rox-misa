@@ -31,7 +31,7 @@ const songs = [
 const photos = Array.from({length:33}, (_,i) => ({
   number:i+1,
   file:`assets/gallery/photo${String(i+1).padStart(2,"0")}.jpg`,
-  locked:[3,6,9,12,16,19,21,22,25,27,30,32].includes(i+1)
+  locked:[3,6,9,12,16,19,21,22,25,27,30,33].includes(i+1)
 }));
 
 const videos = Array.from({length:15}, (_,i) => ({
@@ -1156,7 +1156,7 @@ const friendsData = [
     avatar: "assets/friends/avatar04.png",
     video: "assets/friends/video04.mp4",
     link: "https://xat.me/266694246",
-    quote: "「 ここに好きな言葉を入れてください。 」"
+    quote: "「 ”Hola mi potra, espero que algún dia compartamos peso muerto juntos y una sentadilla también, con cariño, Luguito”。 」"
   },
   {
     number: 5,
@@ -1181,6 +1181,18 @@ const friendsData = [
     video: "assets/friends/video06.mp4",
     link: "https://xat.me/292726185",
     quote: "「 ここに好きな言葉を入れてください。 」"
+  },
+  {
+    number: 7,
+    name: "Dami",
+    register: "REG: KEIOU",
+    uid: "UID: 108534737",
+    file: "assets/friends/friend07.jpg",
+    render: "assets/friends/render07.png",
+    avatar: "assets/friends/avatar07.png",
+    video: "assets/friends/video07.mp4",
+    link: "https://xat.me/108534737",
+    quote: "「 Que onda roxy, espero que tu hermanita te haya dado permiso para este space, si no le voy a tener que contar, saludos。 」"
   }
 ];
 
