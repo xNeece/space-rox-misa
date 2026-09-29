@@ -28,10 +28,10 @@ const songs = [
   { title:"Killing You", artist:"Asking Alexandria.", file:"assets/music/song10.mp3" }
 ];
 
-const photos = Array.from({length:33}, (_,i) => ({
+const photos = Array.from({length:37}, (_,i) => ({
   number:i+1,
   file:`assets/gallery/photo${String(i+1).padStart(2,"0")}.jpg`,
-  locked:[3,6,9,12,16,19,21,22,25,27,30,33].includes(i+1)
+  locked:[3,6,9,12,16,19,21,22,25,27,30,33,35,37].includes(i+1)
 }));
 
 const videos = Array.from({length:15}, (_,i) => ({
