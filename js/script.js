@@ -1180,7 +1180,7 @@ const friendsData = [
     avatar: "assets/friends/avatar06.png",
     video: "assets/friends/video06.mp4",
     link: "https://xat.me/1542991141",
-    quote: "<p>「 Me alegro mucho de haberte conocido y de todas las risas, charlas y libros que hemos ido compartiendo (o que te he pasado yo).</p><p><p> A ver cuando continuas tus lecturas que no tengo con quien hablar. </p><p>Que sigamos recomendándonos libros y compartiendo frikadas por mucho tiempo。 」</p>"
+    quote: "<p>「 Me alegro mucho de haberte conocido y de todas las risas, charlas y libros que hemos ido compartiendo (o que te he pasado yo).</p><p><p> A ver cuando continuas tus lecturas que no tengo con quien hablar. </p><p>Que sigamos recomendándonos libros y compartiendo frikadas por mucho tiempo.</p><p>“Live, Manon. Live” — A better wold.” 。 」</p>"
   },
   {
     number: 7,
