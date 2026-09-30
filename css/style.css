@@ -1273,3 +1273,13 @@ video::-moz-range-track {
   justify-content: center;
   gap: 6px; /* Espacio entre el icono de la cadena y la palabra Space */
 }
+.socials a svg.x-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor; /* Hereda el color gris del enlace y cambia a blanco en el hover */
+  transition: fill 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+}
+
+.socials a:hover svg.x-icon {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+}
